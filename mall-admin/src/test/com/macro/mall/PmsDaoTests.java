@@ -24,6 +24,9 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PmsDaoTests {
+
+    @Autowired
+    private PetSummaryService petSummaryService;
     @Autowired
     private PmsMemberPriceDao memberPriceDao;
     @Autowired
@@ -51,4 +54,14 @@ public class PmsDaoTests {
         String json = JSONUtil.parse(productResult).toString();
         LOGGER.info(json);
     }
+
+
+    @Test
+    public void  testAddCat(){
+        petSummaryParam.setName("小美猫咪");
+        int count = petSummaryService.create(petSummaryParam);
+        String json = JSONUtil.parse("success".toString();
+        LOGGER.info(json);
+    }
+
 }
