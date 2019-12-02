@@ -1,6 +1,5 @@
 package com.macro.mall.model;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -315,52 +314,62 @@ public class PetSummaryExample {
             return (Criteria) this;
         }
 
-        public Criteria andEngnameEqualTo(Long value) {
+        public Criteria andEngnameEqualTo(String value) {
             addCriterion("engName =", value, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameNotEqualTo(Long value) {
+        public Criteria andEngnameNotEqualTo(String value) {
             addCriterion("engName <>", value, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameGreaterThan(Long value) {
+        public Criteria andEngnameGreaterThan(String value) {
             addCriterion("engName >", value, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameGreaterThanOrEqualTo(Long value) {
+        public Criteria andEngnameGreaterThanOrEqualTo(String value) {
             addCriterion("engName >=", value, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameLessThan(Long value) {
+        public Criteria andEngnameLessThan(String value) {
             addCriterion("engName <", value, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameLessThanOrEqualTo(Long value) {
+        public Criteria andEngnameLessThanOrEqualTo(String value) {
             addCriterion("engName <=", value, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameIn(List<Long> values) {
+        public Criteria andEngnameLike(String value) {
+            addCriterion("engName like", value, "engname");
+            return (Criteria) this;
+        }
+
+        public Criteria andEngnameNotLike(String value) {
+            addCriterion("engName not like", value, "engname");
+            return (Criteria) this;
+        }
+
+        public Criteria andEngnameIn(List<String> values) {
             addCriterion("engName in", values, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameNotIn(List<Long> values) {
+        public Criteria andEngnameNotIn(List<String> values) {
             addCriterion("engName not in", values, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameBetween(Long value1, Long value2) {
+        public Criteria andEngnameBetween(String value1, String value2) {
             addCriterion("engName between", value1, value2, "engname");
             return (Criteria) this;
         }
 
-        public Criteria andEngnameNotBetween(Long value1, Long value2) {
+        public Criteria andEngnameNotBetween(String value1, String value2) {
             addCriterion("engName not between", value1, value2, "engname");
             return (Criteria) this;
         }
@@ -375,52 +384,62 @@ public class PetSummaryExample {
             return (Criteria) this;
         }
 
-        public Criteria andPriceEqualTo(BigDecimal value) {
+        public Criteria andPriceEqualTo(String value) {
             addCriterion("price =", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceNotEqualTo(BigDecimal value) {
+        public Criteria andPriceNotEqualTo(String value) {
             addCriterion("price <>", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceGreaterThan(BigDecimal value) {
+        public Criteria andPriceGreaterThan(String value) {
             addCriterion("price >", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceGreaterThanOrEqualTo(BigDecimal value) {
+        public Criteria andPriceGreaterThanOrEqualTo(String value) {
             addCriterion("price >=", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceLessThan(BigDecimal value) {
+        public Criteria andPriceLessThan(String value) {
             addCriterion("price <", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceLessThanOrEqualTo(BigDecimal value) {
+        public Criteria andPriceLessThanOrEqualTo(String value) {
             addCriterion("price <=", value, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceIn(List<BigDecimal> values) {
+        public Criteria andPriceLike(String value) {
+            addCriterion("price like", value, "price");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriceNotLike(String value) {
+            addCriterion("price not like", value, "price");
+            return (Criteria) this;
+        }
+
+        public Criteria andPriceIn(List<String> values) {
             addCriterion("price in", values, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceNotIn(List<BigDecimal> values) {
+        public Criteria andPriceNotIn(List<String> values) {
             addCriterion("price not in", values, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceBetween(BigDecimal value1, BigDecimal value2) {
+        public Criteria andPriceBetween(String value1, String value2) {
             addCriterion("price between", value1, value2, "price");
             return (Criteria) this;
         }
 
-        public Criteria andPriceNotBetween(BigDecimal value1, BigDecimal value2) {
+        public Criteria andPriceNotBetween(String value1, String value2) {
             addCriterion("price not between", value1, value2, "price");
             return (Criteria) this;
         }

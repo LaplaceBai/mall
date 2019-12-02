@@ -2,7 +2,6 @@ package com.macro.mall.model;
 
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 public class PetSummary implements Serializable {
     @ApiModelProperty(value = "宠物列表页")
@@ -15,9 +14,9 @@ public class PetSummary implements Serializable {
     private String name;
 
     @ApiModelProperty(value = "宠物英文名")
-    private Long engname;
+    private String engname;
 
-    private BigDecimal price;
+    private String price;
 
     @ApiModelProperty(value = "宠物网址")
     private String coverurl;
@@ -51,19 +50,19 @@ public class PetSummary implements Serializable {
         this.name = name;
     }
 
-    public Long getEngname() {
+    public String getEngname() {
         return engname;
     }
 
-    public void setEngname(Long engname) {
+    public void setEngname(String engname) {
         this.engname = engname;
     }
 
-    public BigDecimal getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

@@ -46,5 +46,13 @@ public class PetSummaryServiceImpl implements PetSummaryService {
         return count;
     }
 
+    @Override
+    public List<PetSummary> list(PetSummaryParam petSummaryParam, Integer pageSize, Integer pageNum) {
+        PageHelper.startPage(pageNum, pageSize);
+        PetSummaryExample petSummaryExample = new PetSummaryExample();
+        PetSummaryExample.Criteria criteria = petSummaryExample.createCriteria();
+        //criteria.andD  .andDeleteStatusEqualTo(0);
+        return petSummaryMapper.selectByExample(petSummaryExample);
+    }
 
 }

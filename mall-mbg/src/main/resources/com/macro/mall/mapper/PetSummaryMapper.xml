@@ -5,8 +5,8 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="petID" jdbcType="VARCHAR" property="petid" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="engName" jdbcType="BIGINT" property="engname" />
-    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="engName" jdbcType="VARCHAR" property="engname" />
+    <result column="price" jdbcType="VARCHAR" property="price" />
     <result column="coverURL" jdbcType="VARCHAR" property="coverurl" />
     <result column="type" jdbcType="VARCHAR" property="type" />
   </resultMap>
@@ -108,8 +108,8 @@
     insert into pet_summary (petID, name, engName, 
       price, coverURL, type
       )
-    values (#{petid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{engname,jdbcType=BIGINT}, 
-      #{price,jdbcType=DECIMAL}, #{coverurl,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}
+    values (#{petid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{engname,jdbcType=VARCHAR}, 
+      #{price,jdbcType=VARCHAR}, #{coverurl,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.macro.mall.model.PetSummary">
@@ -145,10 +145,10 @@
         #{name,jdbcType=VARCHAR},
       </if>
       <if test="engname != null">
-        #{engname,jdbcType=BIGINT},
+        #{engname,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
-        #{price,jdbcType=DECIMAL},
+        #{price,jdbcType=VARCHAR},
       </if>
       <if test="coverurl != null">
         #{coverurl,jdbcType=VARCHAR},
@@ -177,10 +177,10 @@
         name = #{record.name,jdbcType=VARCHAR},
       </if>
       <if test="record.engname != null">
-        engName = #{record.engname,jdbcType=BIGINT},
+        engName = #{record.engname,jdbcType=VARCHAR},
       </if>
       <if test="record.price != null">
-        price = #{record.price,jdbcType=DECIMAL},
+        price = #{record.price,jdbcType=VARCHAR},
       </if>
       <if test="record.coverurl != null">
         coverURL = #{record.coverurl,jdbcType=VARCHAR},
@@ -198,8 +198,8 @@
     set id = #{record.id,jdbcType=BIGINT},
       petID = #{record.petid,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR},
-      engName = #{record.engname,jdbcType=BIGINT},
-      price = #{record.price,jdbcType=DECIMAL},
+      engName = #{record.engname,jdbcType=VARCHAR},
+      price = #{record.price,jdbcType=VARCHAR},
       coverURL = #{record.coverurl,jdbcType=VARCHAR},
       type = #{record.type,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -216,10 +216,10 @@
         name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="engname != null">
-        engName = #{engname,jdbcType=BIGINT},
+        engName = #{engname,jdbcType=VARCHAR},
       </if>
       <if test="price != null">
-        price = #{price,jdbcType=DECIMAL},
+        price = #{price,jdbcType=VARCHAR},
       </if>
       <if test="coverurl != null">
         coverURL = #{coverurl,jdbcType=VARCHAR},
@@ -234,8 +234,8 @@
     update pet_summary
     set petID = #{petid,jdbcType=VARCHAR},
       name = #{name,jdbcType=VARCHAR},
-      engName = #{engname,jdbcType=BIGINT},
-      price = #{price,jdbcType=DECIMAL},
+      engName = #{engname,jdbcType=VARCHAR},
+      price = #{price,jdbcType=VARCHAR},
       coverURL = #{coverurl,jdbcType=VARCHAR},
       type = #{type,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}

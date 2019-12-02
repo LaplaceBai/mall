@@ -4,6 +4,7 @@ import com.macro.mall.dto.PetSummaryParam;
 import com.macro.mall.dto.PmsProductParam;
 import com.macro.mall.dto.PmsProductQueryParam;
 import com.macro.mall.dto.PmsProductResult;
+import com.macro.mall.model.PetSummary;
 import com.macro.mall.model.PmsProduct;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -21,6 +22,12 @@ public interface PetSummaryService {
      */
     @Transactional(isolation = Isolation.DEFAULT,propagation = Propagation.REQUIRED)
     int create(PetSummaryParam petSummaryParam);
+
+
+    /**
+     * 分页查询商品
+     */
+    List<PetSummary> list(PetSummaryParam petSummaryParam, Integer pageSize, Integer pageNum);
 
 
 }
