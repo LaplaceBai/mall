@@ -58,6 +58,21 @@ public class PetController {
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
+    @RequestMapping(value = "/getRescueList", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult getRescueList() {
+        PetSummaryParam petSummaryParam = new PetSummaryParam();
+
+
+
+        List<PetSummary> petSummaryList = petSummaryService.list(petSummaryParam,45,1);
+
+        return CommonResult.success(petSummaryList);
+    }
+
+
+
+
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult add() {

@@ -68,7 +68,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/admin/login",
                         "/admin/register",
-                        "/pet/add","/pet/testAPI","/pet/getPetList")// 对登录注册要允许匿名访问
+                        "/pet/add","/pet/testAPI","/pet/getPetList","/pet/getRescueList")// 对登录注册要允许匿名访问
                 .permitAll()
                 .antMatchers(HttpMethod.OPTIONS)//跨域请求会先进行一次options请求
                 .permitAll()
